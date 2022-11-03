@@ -1,4 +1,8 @@
-## Usage
+## solid-todolist
+
+- learn solidjs demo
+- Understand the solidjs usage
+- follow [todolist](https://www.todolist.cn/) 
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
 
