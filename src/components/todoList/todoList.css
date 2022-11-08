@@ -130,7 +130,34 @@ img {
   color: rgba(73,74,75,.45)
 }
 
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  font-size: 12px;
+}
 
+.options .filters{
+  display: flex;
+  align-items: center;
+  gap: 6px
+}
+
+.options .option{
+  padding: .3em .6em;
+  border-radius: 4px;
+  transition: all 60ms ease-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+.options .option.active,.options .option:hover {
+  color: #fff;
+  background-color: #fe7345
+}
 @keyframes flipInX {
   0% {
       transform: rotateX(90deg);
@@ -620,3 +647,4 @@ svg:not(:root).svg-inline--fa {
 .fad.fa-inverse {
   color: #fff;
 }
+
