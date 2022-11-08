@@ -2,7 +2,8 @@ import { batch, Component } from 'solid-js'
 import styles from './App.module.css'
 import { Header, HeaderProps } from './components/header'
 import { SetTask } from './components/seTask'
-import { ITodoItem, TodoList } from './components/todoList'
+import {TodoList } from './components/todoList'
+import { FilterType, ITodoItem } from './components/todoList/useTodoList'
 import { createLocalStore, removeIndex } from './utils/storage'
 
 const App: Component = () => {
@@ -25,10 +26,12 @@ const App: Component = () => {
   const changeList = (item: ITodoItem, index: number) => {
     setTodos(index, 'isDone', !item.isDone)
   }
-
+  let todolistRef 
   const addTodo = (item: ITodoItem) => {
     batch(() => {
       setTodos(todos.length, item)
+      // TODO solid js 如何调用子组件方法
+      // todolistRef.setFilterType(FilterType.All)
     })
   }
   return (
